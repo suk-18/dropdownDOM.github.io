@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dropdown using DOM Manipulation</title>
+
+   <link rel="stylesheet" href="style.css">
+ </head>
+
+<body>
+    <div class="sections-container">
+      <div class="section">
+        <div class="container">
+           <label for="color">Select Text Color:</label>
+          <select id="color">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <br /><br />
+
+          <label for="bgColor">Select Background Color:</label>
+          <select id="bgColor">
+            <option value="white">White</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+          </select>
+          <br /><br />
+
+          <label for="padding">Select Padding:</label>
+          <select id="padding">
+            <option value="10px">10px</option>
+            <option value="15px">15px</option>
+            <option value="20px">20px</option>
+            <option value="30px">30px</option>
+          </select>
+          <br /><br />
+
+          <label for="fontSize">Select Font Size:</label>
+          <select id="fontSize">
+            <option value="10px">10px</option>
+            <option value="15px">15px</option>
+            <option value="20px">20px</option>
+            <option value="25px">25px</option>
+          </select>
+          <br /><br />
+
+          <label for="fontWeight">Select Font Weight:</label>
+          <select id="fontWeight">
+            <option value="normal">Normal</option>
+            <option value="bold">Bold</option>
+            <option value="lighter">Light</option>
+          </select>
+          <br /><br />
+        </div>
+      </div>
+
+      <div class="section">
+        <div id="changingDiv">
+         This is made by Sukanya Chodhury
+        </div>
+      </div>
+    </div>
+
+  <!-- Java Script Code -->
+
+    <script>
+      const colorSelect = document.getElementById("color");
+      const bgColorSelect = document.getElementById("bgColor");
+      const paddingSelect = document.getElementById("padding");
+      const fontSizeSelect = document.getElementById("fontSize");
+      const fontWeightSelect = document.getElementById("fontWeight");
+      const changingDiv = document.getElementById("changingDiv");
+
+      colorSelect.addEventListener("change", () => {
+        changingDiv.style.color = colorSelect.value;
+      });
+
+      bgColorSelect.addEventListener("change", () => {
+        changingDiv.style.backgroundColor = bgColorSelect.value;
+      });
+
+      paddingSelect.addEventListener("change", () => {
+        changingDiv.style.padding = paddingSelect.value;
+      });
+
+      fontSizeSelect.addEventListener("change", () => {
+        changingDiv.style.fontSize = fontSizeSelect.value;
+      });
+
+      fontWeightSelect.addEventListener("change", () => {
+        changingDiv.style.fontWeight = fontWeightSelect.value;
+      });
+    </script>
+  </body>
+</html>
